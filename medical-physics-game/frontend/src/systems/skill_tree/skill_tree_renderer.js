@@ -5,6 +5,15 @@
  * Responsible for drawing nodes, connections, and handling interactions.
  */
 
+/**
+ * @system SkillTree
+ * @component SkillTreeRenderer
+ * @description Renders the skill tree visualization
+ * @dependencies ../../core/event_system.js, ./skill_tree_data.js
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 import skillTreeController from './skill_tree_controller.js';
 
 class SkillTreeRenderer {

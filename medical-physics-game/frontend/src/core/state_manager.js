@@ -1,6 +1,16 @@
 /**
  * Game state management
  */
+
+/**
+ * @system StateManagement
+ * @component StateManager
+ * @description Frontend state management system
+ * @dependencies None
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 class StateManager {
     constructor() {
         this.state = {

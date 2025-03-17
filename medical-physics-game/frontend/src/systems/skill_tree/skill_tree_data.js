@@ -4,6 +4,15 @@
  * Handles data loading, parsing, and API interactions for the skill tree system.
  */
 
+/**
+ * @system SkillTree
+ * @component SkillTreeData
+ * @description Handles skill tree data loading and processing
+ * @dependencies ../../core/state_manager.js
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 // API endpoint URLs
 const API_BASE = '/api/skill-tree';
 

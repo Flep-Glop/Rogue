@@ -1,3 +1,12 @@
+"""
+@system Character
+@component CharacterModel
+@description Data model for character information
+@dependencies None
+@author Luke
+@lastModified 2025-03-17
+"""
+
 import json
 
 class Character:

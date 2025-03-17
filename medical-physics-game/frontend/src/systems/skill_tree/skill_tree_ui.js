@@ -5,6 +5,15 @@
  * Manages the info panel, buttons, and user interactions.
  */
 
+/**
+ * @system SkillTree
+ * @component SkillTreeUI
+ * @description Manages UI components and interactions for the skill tree
+ * @dependencies ../../core/event_system.js, ./skill_tree_controller.js
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 import skillTreeController from './skill_tree_controller.js';
 import SkillTreeRenderer from './skill_tree_renderer.js';
 

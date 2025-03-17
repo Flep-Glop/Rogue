@@ -1,3 +1,12 @@
+"""
+@system Character
+@component CharacterRepository
+@description Data access layer for character information
+@dependencies ../character.py
+@author Luke
+@lastModified 2025-03-17
+"""
+
 import json
 import os
 from pathlib import Path

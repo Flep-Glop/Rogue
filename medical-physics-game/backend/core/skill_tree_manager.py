@@ -2,6 +2,16 @@
 Skill Tree Manager for the Medical Physics Game.
 This file contains the business logic for skill tree operations.
 """
+
+"""
+@system SkillTree
+@component SkillTreeManager
+@description Manages skill tree unlocks, progression, and effects
+@dependencies state_manager.py
+@author Luke
+@lastModified 2025-03-17
+"""
+
 from typing import Dict, List, Optional, Tuple
 
 from backend.data.models.skill_tree import SkillNode, SkillTree

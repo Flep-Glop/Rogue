@@ -1,3 +1,13 @@
+"""
+@system Character
+@component CharacterRoutes
+@description API endpoints for character management
+@dependencies flask, character_repo.py, state_manager.py
+@routes /api/character/*
+@author Luke
+@lastModified 2025-03-17
+"""
+
 from flask import jsonify, request
 from backend.api.routes import api_bp
 from backend.data.repositories.character_repo import get_all_characters, get_character_by_id, save_custom_character

@@ -1,3 +1,12 @@
+<!--
+@system Documentation
+@component SystemsArchitecture
+@description Documentation of the Medical Physics Game system architecture
+@dependencies None
+@author Luke
+@lastModified 2025-03-17
+-->
+
 # Medical Physics Game - Systems Architecture
 
 ## Core Systems

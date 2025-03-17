@@ -3,6 +3,15 @@
  * Styling for the skill tree system components
  */
 
+/*
+@system SkillTree
+@component SkillTreeStyles
+@description Styling for the skill tree visualization and UI
+@dependencies None
+@author Your Name
+@lastModified 2025-03-17
+*/
+
 /* Container Layout */
 .skill-tree-container {
     display: flex;

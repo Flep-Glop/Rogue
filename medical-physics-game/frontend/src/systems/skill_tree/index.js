@@ -5,6 +5,15 @@
  * and provides initialization functions.
  */
 
+/**
+ * @system SkillTree
+ * @component SkillTreeIndex
+ * @description Main entry point for the skill tree system
+ * @dependencies skill_tree_controller.js, skill_tree_renderer.js, skill_tree_ui.js
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 import skillTreeController from './skill_tree_controller.js';
 import SkillTreeRenderer from './skill_tree_renderer.js';
 import SkillTreeUI from './skill_tree_ui.js';

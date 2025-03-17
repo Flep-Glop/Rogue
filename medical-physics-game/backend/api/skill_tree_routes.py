@@ -2,6 +2,17 @@
 Skill Tree API Routes for the Medical Physics Game.
 This file defines the API endpoints for skill tree operations.
 """
+
+"""
+@system SkillTree
+@component SkillTreeRoutes
+@description API endpoints for skill tree functionality
+@dependencies flask, skill_tree_manager.py, state_manager.py
+@routes /api/skill-tree/*
+@author Luke
+@lastModified 2025-03-17
+"""
+
 from flask import Blueprint, jsonify, request
 
 from backend.core.skill_tree_manager import SkillTreeManager

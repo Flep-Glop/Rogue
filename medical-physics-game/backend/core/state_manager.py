@@ -2,6 +2,14 @@
 Game state manager for the Medical Physics Game.
 Central module for managing game state and providing game logic functions.
 """
+"""
+@system StateManagement
+@component StateManager
+@description Maintains game state across systems, handles saving/loading
+@dependencies None
+@author Luke
+@lastModified 2025-03-17
+"""
 
 import json
 import random

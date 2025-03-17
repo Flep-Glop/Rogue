@@ -3,6 +3,15 @@
  * Implements a publish-subscribe pattern for event handling
  */
 
+/**
+ * @system EventSystem
+ * @component EventManager
+ * @description Handles events and communication between components
+ * @dependencies None
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 export class EventSystem {
     /**
      * Initialize a new event system

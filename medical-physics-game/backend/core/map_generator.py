@@ -1,3 +1,12 @@
+"""
+@system MapGeneration
+@component MapGenerator
+@description Creates procedural game maps/floors
+@dependencies state_manager.py
+@author Luke
+@lastModified 2025-03-17
+"""
+
 import random
 import uuid
 

@@ -5,6 +5,15 @@
  * Coordinates between the data layer and the UI.
  */
 
+/**
+ * @system SkillTree
+ * @component SkillTreeController
+ * @description Controls skill tree interactions and logic
+ * @dependencies ../../core/state_manager.js, ../../core/event_system.js, ./skill_tree_data.js
+ * @author Luke
+ * @lastModified 2025-03-17
+ */
+
 import skillTreeData from './skill_tree_data.js';
 import { EventSystem } from '../../core/event_system.js';
 
