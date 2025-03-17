@@ -1,0 +1,285 @@
+{
+  "physicist_template": {
+    "id": "physicist_template",
+    "name": "Medical Physicist Skill Tree",
+    "description": "Skill tree for the Medical Physicist character class, focusing on radiation physics and treatment planning.",
+    "character_class": "physicist",
+    "nodes": {
+      "radiation_basics": {
+        "id": "radiation_basics",
+        "name": "Radiation Fundamentals",
+        "description": "Understanding the basic principles of radiation physics and interaction with matter.",
+        "icon": "radiation_icon.png",
+        "x_position": 0,
+        "y_position": 0,
+        "unlocked": true,
+        "level": 1,
+        "max_level": 1,
+        "effects": [
+          {"type": "knowledge_boost", "value": 5}
+        ],
+        "prerequisites": [],
+        "category": "physics",
+        "cost": 0
+      },
+      "dosimetry_101": {
+        "id": "dosimetry_101",
+        "name": "Basic Dosimetry",
+        "description": "Learn the fundamentals of radiation dose measurement and calculation.",
+        "icon": "dosimeter_icon.png",
+        "x_position": -100,
+        "y_position": 100,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 3,
+        "effects": [
+          {"type": "stat_boost", "stat": "accuracy", "value": 5},
+          {"type": "knowledge_boost", "value": 3}
+        ],
+        "prerequisites": ["radiation_basics"],
+        "category": "dosimetry",
+        "cost": 1
+      },
+      "beam_modeling": {
+        "id": "beam_modeling",
+        "name": "Beam Modeling",
+        "description": "Learn how to model radiation beams for treatment planning.",
+        "icon": "beam_icon.png",
+        "x_position": 100,
+        "y_position": 100,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 2,
+        "effects": [
+          {"type": "stat_boost", "stat": "planning_speed", "value": 10},
+          {"type": "knowledge_boost", "value": 5}
+        ],
+        "prerequisites": ["radiation_basics"],
+        "category": "planning",
+        "cost": 1
+      },
+      "advanced_dosimetry": {
+        "id": "advanced_dosimetry",
+        "name": "Advanced Dosimetry",
+        "description": "Master complex dose calculation algorithms and measurement techniques.",
+        "icon": "advanced_dosimeter_icon.png",
+        "x_position": -150,
+        "y_position": 200,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 3,
+        "effects": [
+          {"type": "stat_boost", "stat": "accuracy", "value": 10},
+          {"type": "stat_boost", "stat": "critical_thinking", "value": 5}
+        ],
+        "prerequisites": ["dosimetry_101"],
+        "category": "dosimetry",
+        "cost": 2
+      },
+      "treatment_optimization": {
+        "id": "treatment_optimization",
+        "name": "Treatment Optimization",
+        "description": "Learn techniques to optimize radiation treatment plans for better outcomes.",
+        "icon": "optimization_icon.png",
+        "x_position": 50,
+        "y_position": 200,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 3,
+        "effects": [
+          {"type": "stat_boost", "stat": "planning_quality", "value": 15},
+          {"type": "knowledge_boost", "value": 8}
+        ],
+        "prerequisites": ["beam_modeling"],
+        "category": "planning",
+        "cost": 2
+      },
+      "imrt_planning": {
+        "id": "imrt_planning",
+        "name": "IMRT Planning",
+        "description": "Learn intensity-modulated radiation therapy planning techniques.",
+        "icon": "imrt_icon.png",
+        "x_position": 150,
+        "y_position": 200,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 2,
+        "effects": [
+          {"type": "unlock_feature", "feature": "IMRT_Tools"},
+          {"type": "stat_boost", "stat": "planning_quality", "value": 10}
+        ],
+        "prerequisites": ["beam_modeling"],
+        "category": "planning",
+        "cost": 3
+      },
+      "monte_carlo": {
+        "id": "monte_carlo",
+        "name": "Monte Carlo Methods",
+        "description": "Apply Monte Carlo simulation techniques for accurate dose calculation.",
+        "icon": "monte_carlo_icon.png",
+        "x_position": -200,
+        "y_position": 300,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 1,
+        "effects": [
+          {"type": "stat_boost", "stat": "accuracy", "value": 25},
+          {"type": "stat_boost", "stat": "calculation_time", "value": -15}
+        ],
+        "prerequisites": ["advanced_dosimetry"],
+        "category": "computation",
+        "cost": 4
+      },
+      "adaptive_planning": {
+        "id": "adaptive_planning",
+        "name": "Adaptive Planning",
+        "description": "Learn techniques to adapt treatment plans based on anatomical changes during treatment.",
+        "icon": "adaptive_icon.png",
+        "x_position": 100,
+        "y_position": 300,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 2,
+        "effects": [
+          {"type": "unlock_feature", "feature": "Adaptive_Planning_Tools"},
+          {"type": "stat_boost", "stat": "planning_quality", "value": 20}
+        ],
+        "prerequisites": ["treatment_optimization", "imrt_planning"],
+        "category": "planning",
+        "cost": 4
+      },
+      "research_methods": {
+        "id": "research_methods",
+        "name": "Research Methods",
+        "description": "Learn how to design and conduct research in medical physics.",
+        "icon": "research_icon.png",
+        "x_position": 0,
+        "y_position": 300,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 3,
+        "effects": [
+          {"type": "stat_boost", "stat": "research_efficiency", "value": 15},
+          {"type": "stat_boost", "stat": "critical_thinking", "value": 10}
+        ],
+        "prerequisites": ["advanced_dosimetry", "treatment_optimization"],
+        "category": "academic",
+        "cost": 3
+      },
+      "master_physicist": {
+        "id": "master_physicist",
+        "name": "Master Medical Physicist",
+        "description": "Become a master of medical physics with comprehensive knowledge and skills.",
+        "icon": "master_icon.png",
+        "x_position": 0,
+        "y_position": 400,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 1,
+        "effects": [
+          {"type": "stat_boost", "stat": "accuracy", "value": 20},
+          {"type": "stat_boost", "stat": "planning_quality", "value": 20},
+          {"type": "stat_boost", "stat": "critical_thinking", "value": 20},
+          {"type": "unlock_feature", "feature": "Advanced_Simulation"}
+        ],
+        "prerequisites": ["monte_carlo", "adaptive_planning", "research_methods"],
+        "category": "mastery",
+        "cost": 5
+      }
+    },
+    "available_points": 0,
+    "total_earned_points": 0
+  },
+  "resident_template": {
+    "id": "resident_template",
+    "name": "Medical Resident Skill Tree",
+    "description": "Skill tree for the Medical Resident character class, focusing on clinical knowledge and patient care.",
+    "character_class": "resident",
+    "nodes": {
+      "patient_care_basics": {
+        "id": "patient_care_basics",
+        "name": "Patient Care Fundamentals",
+        "description": "Learn the basics of patient care in radiation oncology.",
+        "icon": "patient_icon.png",
+        "x_position": 0,
+        "y_position": 0,
+        "unlocked": true,
+        "level": 1,
+        "max_level": 1,
+        "effects": [
+          {"type": "knowledge_boost", "value": 5},
+          {"type": "stat_boost", "stat": "patient_rapport", "value": 5}
+        ],
+        "prerequisites": [],
+        "category": "clinical",
+        "cost": 0
+      },
+      "anatomy_101": {
+        "id": "anatomy_101",
+        "name": "Radiation Anatomy",
+        "description": "Study anatomical structures relevant to radiation treatment.",
+        "icon": "anatomy_icon.png",
+        "x_position": -100,
+        "y_position": 100,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 3,
+        "effects": [
+          {"type": "stat_boost", "stat": "contouring_speed", "value": 10},
+          {"type": "knowledge_boost", "value": 5}
+        ],
+        "prerequisites": ["patient_care_basics"],
+        "category": "anatomy",
+        "cost": 1
+      }
+    },
+    "available_points": 0,
+    "total_earned_points": 0
+  },
+  "qa_specialist_template": {
+    "id": "qa_specialist_template",
+    "name": "QA Specialist Skill Tree",
+    "description": "Skill tree for the Quality Assurance Specialist character class, focusing on equipment QA and safety protocols.",
+    "character_class": "qa_specialist",
+    "nodes": {
+      "qa_fundamentals": {
+        "id": "qa_fundamentals",
+        "name": "QA Fundamentals",
+        "description": "Learn the basics of quality assurance in radiation oncology.",
+        "icon": "qa_icon.png",
+        "x_position": 0,
+        "y_position": 0,
+        "unlocked": true,
+        "level": 1,
+        "max_level": 1,
+        "effects": [
+          {"type": "knowledge_boost", "value": 5},
+          {"type": "stat_boost", "stat": "attention_to_detail", "value": 5}
+        ],
+        "prerequisites": [],
+        "category": "quality",
+        "cost": 0
+      },
+      "equipment_testing": {
+        "id": "equipment_testing",
+        "name": "Equipment Testing",
+        "description": "Learn techniques for testing and validating radiation therapy equipment.",
+        "icon": "equipment_icon.png",
+        "x_position": -100,
+        "y_position": 100,
+        "unlocked": false,
+        "level": 0,
+        "max_level": 3,
+        "effects": [
+          {"type": "stat_boost", "stat": "testing_efficiency", "value": 10},
+          {"type": "knowledge_boost", "value": 5}
+        ],
+        "prerequisites": ["qa_fundamentals"],
+        "category": "equipment",
+        "cost": 1
+      }
+    },
+    "available_points": 0,
+    "total_earned_points": 0
+  }
+}

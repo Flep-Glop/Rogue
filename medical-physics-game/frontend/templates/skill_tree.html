@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Skill Tree - Medical Physics Game{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components/skill_tree.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Character Skill Tree</h1>
+  <div class="character-info">
+    <span class="character-name">{{ character.name }}</span>
+    <span class="character-class">{{ character.character_class }}</span>
+  </div>
+</div>
+
+<div class="skill-tree-container">
+  <div class="skill-tree-canvas-container">
+    <canvas id="skill-tree-canvas"></canvas>
+    <div id="skill-tree-controls" class="skill-tree-controls"></div>
+  </div>
+  <div id="skill-tree-info" class="skill-tree-info-panel">
+    <div class="info-message">Select a skill to view details</div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Import core modules -->
+<script type="module">
+  import skillTreeSystem from "{{ url_for('static', filename='js/systems/skill_tree/index.js') }}";
+  
+  // Initialize the skill tree when the DOM is loaded
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      // Get character data from page
+      const characterClass = "{{ character.character_class }}";
+      const characterId = "{{ character.id }}";
+      
+      // Initialize the skill tree
+      await skillTreeSystem.initialize({
+        characterClass,
+        characterId,
+        canvasId: 'skill-tree-canvas',
+        infoPanelId: 'skill-tree-info',
+        controlsId: 'skill-tree-controls'
+      });
+      
+      console.log('Skill tree initialized successfully');
+    } catch (error) {
+      console.error('Error initializing skill tree:', error);
+      document.getElementById('skill-tree-info').innerHTML = `
+        <div class="error-message">
+          Failed to load skill tree: ${error.message}
+        </div>
+      `;
+    }
+  });
+</script>
+{% endblock %}
