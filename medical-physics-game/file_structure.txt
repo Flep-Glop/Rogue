@@ -1,0 +1,122 @@
+.
+├── medical-physics-game
+│   ├── backend
+│   │   ├── api
+│   │   │   ├── __init__.py
+│   │   │   ├── character_routes.py
+│   │   │   ├── feedback_routes.py
+│   │   │   ├── item_routes.py
+│   │   │   ├── question_routes.py
+│   │   │   └── skill_tree_routes.py
+│   │   ├── core
+│   │   │   ├── __init__.py
+│   │   │   ├── difficulty_manager.py
+│   │   │   ├── map_generator.py
+│   │   │   ├── skill_tree_manager.py
+│   │   │   └── state_manager.py
+│   │   ├── data
+│   │   │   ├── models
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── character.py
+│   │   │   │   ├── item.py
+│   │   │   │   ├── patient_case.py
+│   │   │   │   └── question.py
+│   │   │   ├── repositories
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── character_repo.py
+│   │   │   │   ├── item_repo.py
+│   │   │   │   ├── patient_case_repo.py
+│   │   │   │   └── question_repo.py
+│   │   │   └── __init__.py
+│   │   ├── utils
+│   │   │   ├── __init__.py
+│   │   │   ├── analytics.py
+│   │   │   ├── cache.py
+│   │   │   ├── logging.py
+│   │   │   └── profiler.py
+│   │   └── __init__.py
+│   ├── data
+│   │   ├── characters
+│   │   │   └── characters.json
+│   │   ├── items
+│   │   ├── maps
+│   │   │   ├── floors.json
+│   │   │   ├── node_templates.json
+│   │   │   └── node_types.json
+│   │   ├── questions
+│   │   │   ├── patient_cases
+│   │   │   │   └── patient_cases.json
+│   │   │   └── questions.json
+│   │   └── skill_tree
+│   │       └── skill_tree.json
+│   ├── docs
+│   │   ├── images
+│   │   ├── CONTRIBUTING.md
+│   │   └── SYSTEMS.md
+│   ├── frontend
+│   │   ├── src
+│   │   │   ├── core
+│   │   │   │   ├── event_system.js
+│   │   │   │   ├── item_manager.js
+│   │   │   │   └── state_manager.js
+│   │   │   ├── entities
+│   │   │   │   └── nodes
+│   │   │   │       ├── node_types
+│   │   │   │       │   ├── boss_component.js
+│   │   │   │       │   ├── boss_effects.js
+│   │   │   │       │   ├── boss_helpers.js
+│   │   │   │       │   ├── boss_professor.js
+│   │   │   │       │   ├── elite_component.js
+│   │   │   │       │   ├── event_component.js
+│   │   │   │       │   ├── gamble_component.js
+│   │   │   │       │   ├── patient_case_component.js
+│   │   │   │       │   ├── question_component.js
+│   │   │   │       │   ├── rest_component.js
+│   │   │   │       │   ├── shop_component.js
+│   │   │   │       │   └── treasure_component.js
+│   │   │   │       ├── node_factory.js
+│   │   │   │       └── node_registry.js
+│   │   │   ├── systems
+│   │   │   │   ├── character
+│   │   │   │   └── skill_tree
+│   │   │   │       ├── index.js
+│   │   │   │       ├── skill_tree_controller.js
+│   │   │   │       ├── skill_tree_data.js
+│   │   │   │       ├── skill_tree_renderer.js
+│   │   │   │       └── skill_tree_ui.js
+│   │   │   ├── ui
+│   │   │   │   ├── hud
+│   │   │   │   ├── screens
+│   │   │   │   └── utils
+│   │   │   │       ├── animation.js
+│   │   │   │       └── sound_manager.js
+│   │   │   └── utils
+│   │   │       └── data
+│   │   │           └── analytics_client.js
+│   │   ├── static
+│   │   │   ├── css
+│   │   │   │   ├── components
+│   │   │   │   ├── inventory.css
+│   │   │   │   ├── map.css
+│   │   │   │   ├── nodes.css
+│   │   │   │   └── skill_tree.css
+│   │   │   ├── images
+│   │   │   └── js
+│   │   ├── templates
+│   │   │   └── skill_tree.html
+│   │   └── ui
+│   │       └── components
+│   │           ├── feedback_system.js
+│   │           ├── inventory_system.js
+│   │           ├── map_renderer.js
+│   │           └── node_interaction.js
+│   ├── tests
+│   │   ├── backend
+│   │   └── frontend
+│   ├── tools
+│   │   └── workspaces
+│   ├── README.md
+│   └── app.py
+└── file_structure.txt
+
+45 directories, 74 files
